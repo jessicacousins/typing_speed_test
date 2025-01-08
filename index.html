@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JMC - Typing Speed Test</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Typing Speed Test</h1>
+      <p id="instructions">Type the following phrase as fast as you can:</p>
+      <h3 id="phrase"></h3>
+      <div id="countdown">Time Left: 10 seconds</div>
+      <input
+        type="text"
+        id="user-input"
+        placeholder="Start typing here..."
+        disabled
+      />
+      <div id="keyboard-container"></div>
+      <p id="result"></p>
+      <button id="start-btn">Start Test</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
