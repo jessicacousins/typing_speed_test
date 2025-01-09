@@ -1,13 +1,27 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #e3faf9;
+  background-color: #f2f7ff;
   text-align: center;
   padding: 20px;
+  transition: background-color 0.5s, color 0.5s;
 }
 
 .container {
   max-width: 600px;
   margin: 0 auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+h1 {
+  color: #444;
+  font-size: 2rem;
+}
+
+h1.glow-title {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 0 0 20px #4af3eb;
 }
 
 #user-input {
@@ -15,6 +29,9 @@ body {
   padding: 10px;
   font-size: 18px;
   margin-bottom: 20px;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  outline: none;
 }
 
 #keyboard-container {
@@ -25,29 +42,116 @@ body {
 }
 
 .key {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #ddd;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 8px;
   font-weight: bold;
+  font-size: 18px;
+  transition: background-color 0.3s ease, transform 0.1s ease, color 0.3s ease;
 }
 
 .key.active {
-  background-color: #4af3eb;
-  color: #000;
+  background-color: #ffcc00;
+  transform: scale(1.1);
 }
 
 #countdown {
   font-size: 20px;
   margin-bottom: 10px;
+  font-weight: bold;
 }
 
 #result {
   margin-top: 20px;
   font-size: 18px;
   font-weight: bold;
+}
+
+#score {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#theme-switcher {
+  margin-bottom: 15px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+body.neon {
+  background-color: #0a0a0a;
+  color: #00ffaa;
+}
+
+body.neon .container {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid #00ffaa;
+}
+
+body.neon #user-input {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #00ffaa;
+  border: 1px solid #00ffaa;
+}
+
+body.neon #instructions,
+body.neon #phrase,
+body.neon #countdown,
+body.neon h1,
+body.neon #result,
+body.neon #theme-switcher {
+  color: #00ffaa;
+}
+
+body.neon .key {
+  background-color: rgba(0, 255, 170, 0.1);
+  border: 1px solid #00ffaa;
+  color: #00ffaa;
+}
+
+body.neon .key.active {
+  background-color: #00ffb3;
+  color: #000;
+}
+
+body.dark {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+body.dark .container {
+  background-color: rgba(40, 40, 40, 0.9);
+  border: 1px solid #444;
+}
+
+body.dark #user-input {
+  background-color: #333;
+  color: white;
+  border: 1px solid #777;
+}
+
+body.dark #instructions,
+body.dark #phrase,
+body.dark #countdown,
+body.dark h1,
+body.dark #result,
+body.dark #theme-switcher {
+  color: white;
+}
+
+body.dark .key {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #888;
+  color: white;
+}
+
+body.dark .key.active {
+  background-color: #ff9500;
+  color: #000;
 }

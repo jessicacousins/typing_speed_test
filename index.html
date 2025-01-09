@@ -8,10 +8,15 @@
   </head>
   <body>
     <div class="container">
-      <h1>Typing Speed Test</h1>
+      <h1 class="glow-title">JMC - Typing Speed Test</h1>
       <p id="instructions">Type the following phrase as fast as you can:</p>
       <h3 id="phrase"></h3>
       <div id="countdown">Time Left: 10 seconds</div>
+      <select id="theme-switcher">
+        <option value="default">Default Theme</option>
+        <option value="neon">Neon Glow</option>
+        <option value="dark">Dark Mode</option>
+      </select>
       <input
         type="text"
         id="user-input"
@@ -20,6 +25,7 @@
       />
       <div id="keyboard-container"></div>
       <p id="result"></p>
+      <p id="score">Score: 0</p>
       <button id="start-btn">Start Test</button>
     </div>
     <script src="script.js"></script>
